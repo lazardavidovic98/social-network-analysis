@@ -17,18 +17,29 @@ The project includes the following steps:
 
 ## Project Structure
 
-<pre style="font-size: 14px; line-height: 1.4;">
-├── <span style="color:#2aa198;">data/                           </span> # Raw data files (e.g., CSV, JSON)
-├── <span style="color:#2aa198;">docs/                           </span> # Project documentation
-├── <span style="color:#2aa198;">images/                         </span> # Visualizations and plots
-├── <span style="color:#2aa198;">magazine/                       </span> # Additional materials or articles
-├── <span style="color:#2aa198;">models/                         </span> # Graph models and processed data
-├── <span style="color:#2aa198;">.gitignore                      </span> # Git ignore rules
-├── <span style="color:#2aa198;">README.md                       </span> # Project overview and instructions
-├── <span style="color:#2aa198;">co-authorship-networks.ipynb    </span> # Jupyter notebook for co-authorship analysis
-└── <span style="color:#2aa198;">journal-networks.ipynb          </span> # Jupyter notebook for journal network analysis
-</pre>
 
+<!-- project-tree:start -->
+<p>
+<a href="https://github.com/LazarDavidovic98/social-network-analysis" title="social-network-analysis"><img src=".github/readme-tree/00.svg" alt="social-network-analysis" align="top"></a><br>
+<a href="https://github.com/LazarDavidovic98/social-network-analysis/blob/main/co-authorship-networks.ipynb" title="co-authorship-networks.ipynb"><img src=".github/readme-tree/01.svg" alt="co-authorship-networks.ipynb — co-authorship graph: centrality, communities" align="top"></a><br>
+<a href="https://github.com/LazarDavidovic98/social-network-analysis/blob/main/journal-networks.ipynb" title="journal-networks.ipynb"><img src=".github/readme-tree/02.svg" alt="journal-networks.ipynb — journal network analysis" align="top"></a><br>
+<a href="https://github.com/LazarDavidovic98/social-network-analysis/tree/main/data" title="data/"><img src=".github/readme-tree/03.svg" alt="data/ — Scopus exports per department" align="top"></a><br>
+<a href="https://github.com/LazarDavidovic98/social-network-analysis/blob/main/data/authors.xlsx" title="data/authors.xlsx"><img src=".github/readme-tree/04.svg" alt="data/authors.xlsx — official staff list used for filtering" align="top"></a><br>
+<a href="https://github.com/LazarDavidovic98/social-network-analysis/blob/main/data/epidemiology.xlsx" title="data/epidemiology.xlsx"><img src=".github/readme-tree/05.svg" alt="data/epidemiology.xlsx" align="top"></a><br>
+<a href="https://github.com/LazarDavidovic98/social-network-analysis/blob/main/data/immunology.xlsx" title="data/immunology.xlsx"><img src=".github/readme-tree/06.svg" alt="data/immunology.xlsx" align="top"></a><br>
+<a href="https://github.com/LazarDavidovic98/social-network-analysis/blob/main/data/infectious_diseases.xlsx" title="data/infectious_diseases.xlsx"><img src=".github/readme-tree/07.svg" alt="data/infectious_diseases.xlsx" align="top"></a><br>
+<a href="https://github.com/LazarDavidovic98/social-network-analysis/blob/main/data/microbiology.xlsx" title="data/microbiology.xlsx"><img src=".github/readme-tree/08.svg" alt="data/microbiology.xlsx" align="top"></a><br>
+<a href="https://github.com/LazarDavidovic98/social-network-analysis/tree/main/magazine" title="magazine/"><img src=".github/readme-tree/09.svg" alt="magazine/ — journal network inputs and results" align="top"></a><br>
+<a href="https://github.com/LazarDavidovic98/social-network-analysis/tree/main/magazine/data" title="magazine/data/"><img src=".github/readme-tree/10.svg" alt="magazine/data/ — authors and works per journal" align="top"></a><br>
+<a href="https://github.com/LazarDavidovic98/social-network-analysis/tree/main/magazine/images" title="magazine/images/"><img src=".github/readme-tree/11.svg" alt="magazine/images/ — assortativity and clustering plots" align="top"></a><br>
+<a href="https://github.com/LazarDavidovic98/social-network-analysis/blob/main/magazine/models/journal-networks.gml" title="magazine/models/journal-networks.gml"><img src=".github/readme-tree/12.svg" alt="magazine/models/journal-networks.gml — saved journal graph" align="top"></a><br>
+<a href="https://github.com/LazarDavidovic98/social-network-analysis/tree/main/models" title="models/"><img src=".github/readme-tree/13.svg" alt="models/ — saved graphs (GML, Pajek, NET)" align="top"></a><br>
+<a href="https://github.com/LazarDavidovic98/social-network-analysis/tree/main/images" title="images/"><img src=".github/readme-tree/14.svg" alt="images/ — Louvain community detection plots" align="top"></a><br>
+<a href="https://github.com/LazarDavidovic98/social-network-analysis/tree/main/docs" title="docs/"><img src=".github/readme-tree/15.svg" alt="docs/ — documentation and presentation" align="top"></a><br>
+</p>
+
+<sub>Every row is a link to that file or folder on GitHub. Purple: folders, green: source code, grey: configuration, data and docs.</sub>
+<!-- project-tree:end -->
 
 ## Technologies Used
 
