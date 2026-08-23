@@ -1,0 +1,14 @@
+# Versions the notebooks were last run and tested with (Python 3.12).
+pandas==3.0.5
+numpy==2.5.2
+networkx==3.6.1
+scipy==1.18.1
+scikit-learn==1.9.0
+matplotlib==3.11.1
+seaborn==0.13.2
+openpyxl==3.1.5
+Unidecode==1.4.0
+
+# Running the notebooks
+jupyterlab==4.6.3
+ipykernel==7.3.0

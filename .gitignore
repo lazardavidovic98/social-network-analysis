@@ -1,5 +1,19 @@
-.ipynb_checkpoints
-~$*
+# Jupyter
+.ipynb_checkpoints/
 
 # Intermediate tables written by co-authorship-networks.ipynb
 output/
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Virtual environments
+.venv/
+venv/
+
+# Office lock files and OS files
+~$*
+.DS_Store
+Thumbs.db
