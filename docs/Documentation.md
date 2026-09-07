@@ -6,10 +6,14 @@ This documentation covers all technical and analytical aspects of the project de
 
 ## Dataset
 
-**Files used:**
-- `authors.xlsx` – list of relevant authors (department employees)
-- `epidemiology.xlsx`, `immunology.xlsx`, `infectious_diseases.xlsx`, `microbiology.xlsx` – raw publication data requiring preprocessing
-- `journal-networks.gml` – journal network graph
+**Input files (`data/`):**
+- `authors.xlsx` – list of relevant authors (department employees), with Serbian column headers (`Ime`, `Prezime`, `Katedra`, `H indeks`, `Broj radova`) that the notebook maps to English
+- `epidemiology.xlsx`, `immunology.xlsx`, `infectious_diseases.xlsx`, `microbiology.xlsx` – raw Scopus publication data requiring preprocessing
+
+**Derived files:**
+- `output/*.xlsx` – cleaned tables written by `co-authorship-networks.ipynb` (git-ignored)
+- `magazine/data/*.xlsx` – committed snapshot of those tables, the input of `journal-networks.ipynb`
+- `models/*.gml`, `models/*.net`, `magazine/models/journal-networks.gml` – saved graphs
 
 **Columns in the .xlsx files:**
 - `Author`, `Authors`, `Title`, `Year`, `Source title`, `Volume`, `Issue`, `Art. No.`, `Page start`, `Page end`, `Page count`, `Cited by`, `Link`, `Document Type`, `Source`
@@ -24,7 +28,9 @@ This documentation covers all technical and analytical aspects of the project de
 
 - `pandas` – table/data manipulation
 - `networkX` – network creation and analysis
-- `matplotlib`, `graphviz` – visualization
+- `matplotlib`, `seaborn` – visualization
+- `scipy` – Kendall τ correlation and the dendrogram
+- `scikit-learn` – spectral clustering
 - `Gephi` – advanced visual analysis and Louvain community detection
 
 ---
@@ -32,7 +38,7 @@ This documentation covers all technical and analytical aspects of the project de
 ## 🧾 Key Analyses
 
 ### Statistical Analysis
-- Number of publications per author (full and fractional counting)
+- Number of publications per author (full counting)
 - Average number of co-authors
 - Computation of H-index per author and comparison with given values
 - Productivity analysis by year and department
@@ -40,15 +46,15 @@ This documentation covers all technical and analytical aspects of the project de
 
 ### Network Modeling
 - Construction of an undirected weighted co-authorship network
-- Construction of the journal network from the `journal-networks.gml` file
+- Construction of an undirected weighted journal network: two journals are linked when the same staff author published in both (saved as `magazine/models/journal-networks.gml`)
 
 ### Network Metrics
-- Network density
-- Diameter and average path length
+- Network density, diameter and average path length (computed in Gephi for the report)
+- Connected components
 - Clustering coefficients (global and local)
 - Degree assortativity
 - Rich-club phenomenon analysis (comparison with Havel-Hakimi graph)
-- Power-law degree distribution analysis
+- Degree distribution (log-scale histogram) and comparison with Erdős–Rényi, G(n, m) and scale-free random graphs
 
 ### Centrality
 - Degree, closeness, betweenness, eigenvector
@@ -65,17 +71,18 @@ This documentation covers all technical and analytical aspects of the project de
 ## Conclusions and Recommendations
 
 - Identified key network actors can serve as candidates for strengthening scientific team connections
-- The network exhibits small-world and assortative properties
+- The network exhibits small-world properties: one connected component, an average path length of 2.08 and clustering about three times higher than in an Erdős–Rényi graph of the same density
+- Degree assortativity is close to zero and slightly negative (−0.041), so there is no assortative mixing; the rich-club coefficient stays below the Havel–Hakimi reference
 - Composite centrality helps rank authors with the most significant influence
 
 ---
 
 ## Technical Details
 
-- Project developed in Python 3.9
-- `.ipynb` files executed in Jupyter Notebook environment
+- Originally developed with Python 3.9; now tested with Python 3.12 and the versions pinned in `requirements.txt`
+- `.ipynb` files executed in Jupyter (see the README for interactive and headless execution, and `tests/` for the automated checks)
 - Network visualizations performed partly in Gephi and partly in Python
-- The analyzed graphs are undirected and weighted (by the number of joint publications)
+- The analyzed graphs are undirected and weighted: the co-authorship network by the number of joint publications, the journal network by the number of shared staff authors
 
 ---
 
