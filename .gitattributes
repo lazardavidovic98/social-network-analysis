@@ -1,0 +1,4 @@
+# Graph files are rewritten by the notebooks with LF line endings; keep them LF on every
+# platform so a re-run does not show up as a change on Windows (core.autocrlf=true).
+*.gml text eol=lf
+*.net text eol=lf
